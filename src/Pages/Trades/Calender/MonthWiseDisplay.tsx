@@ -35,7 +35,6 @@ export default function MonthWiseDisplay(props: CalenderDisplayProps) {
           month={currentMonth.get("month")}
           year={currentMonth.get("year")}
           addTrade={props.addTrade}
-          style={{ width: "650px" }}
         ></MonthBox>
       </div>
     </div>
