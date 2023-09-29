@@ -1,0 +1,190 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+}
+
+.reverseTheme {
+  background-color: var(--primary-foreground);
+  color: var(--primary-background);
+}
+.card {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px 5px;
+  border-radius: 10px;
+}
+.card form {
+  border-radius: 10px;
+  height: 100%;
+}
+.centerItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.formControl {
+  width: 100%;
+}
+
+.h100 {
+  height: 100vh;
+}
+.w100 {
+  width: 100%;
+}
+
+form input[type="text"],
+form select {
+  width: 85%;
+  height: 30px;
+  outline: none;
+  background-color: white !important;
+  color: var(--primary-background);
+  border-radius: 5px;
+}
+
+button {
+  padding: 4px 8px;
+  height: 30px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--primary-background);
+  color: var(--primary-foreground);
+}
+
+.box {
+  width: 11.5%;
+  height: 30px;
+  border: 1px solid var(--primary-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+div.disabled {
+  background-color: gray;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.calender {
+  height: 300px;
+}
+.calender legend {
+  color: var(--primary-background);
+  font-weight: bolder;
+  font-size: larger;
+}
+.emptyBox {
+  border: 1px solid white;
+}
+.sideBar {
+  width: 30vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: var(--primary-foreground);
+}
+
+.tradeform form {
+  width: 75%;
+  border: 1px solid var(--primary-background);
+  padding: 15px;
+}
+.tradeform form > div {
+  margin-bottom: 8px;
+}
+
+.halfWidth {
+  width: 45%;
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (max-width: 480px) {
+  .halfWidth {
+    width: 100%;
+  }
+  .box {
+    width: 10%;
+  }
+  .sideBar {
+    width: 100%;
+  }
+}
+
+.lossDay {
+  background-color: lightcoral;
+}
+
+.profitDay {
+  background-color: lightgreen;
+}
+.positive {
+  color: darkgreen;
+}
+.negative {
+  color: darkred;
+}
+
+.box .contentOnly {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.box .front,
+.box .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box .back {
+  transform: rotateY(180deg);
+}
+
+.box:hover .content {
+  transform: rotateY(180deg);
+}

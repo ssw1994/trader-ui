@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.trade-layout {
+  padding: 15px;
+}
+.trade-layout > div:first-of-type {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.trade-layout a {
+  padding: 5px;
+  border: 1px solid var(--primary-background);
+  border-radius: 5px;
+  background-color: var(--primary-foreground);
+  color: var(--primary-background);
+  text-decoration: none;
+}
+
+.trade-layout a:hover {
+  background-color: var(--primary-background);
+  color: var(--primary-foreground);
+}
+
+.trade-layout a.active {
+  background-color: var(--primary-background);
+  color: var(--primary-foreground);
+}
