@@ -5,7 +5,7 @@ import { TradeEntity } from "src/Models";
 
 const http: Axios = (() => {
   const axiosInstance = axios.create({
-    baseURL: "http://localhost:3000/api/",
+    baseURL: "https://trade-journal-app-two.vercel.app/api/",
     timeout: 2000,
   });
 
