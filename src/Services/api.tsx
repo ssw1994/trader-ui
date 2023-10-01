@@ -68,7 +68,7 @@ export default (() => {
   }
 
   function doRegistration(payload: RegisterParams): Promise<AxiosResponse> {
-    return http.post("auth/register");
+    return http.put("auth/signIn", payload);
   }
   function buildQueryString(obj: any = null): string {
     if (!obj) return "";
